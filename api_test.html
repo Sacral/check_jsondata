@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+
+<title>API TEST</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+
+</head>
+<body>
+<div id ="app">
+
+    <div  style="width: 100%; height: 100px;  " >
+    </div>
+
+    <div style="width: 80%; margin: auto; "> 
+
+        <form class="was-validated" >
+
+            <div class="mb-3">
+                <label for="validationTextarea" class="form-label">API URL</label>
+                <textarea class="form-control " id="validationTextarea" ref="clear" v-model="api_url" placeholder="Input API URL" required ></textarea>
+            </div>
+            
+
+            <div class="mb-3">
+                <label for="validationTextarea" class="form-label">Json Data</label>
+                <textarea class="form-control " id="validationTextarea" ref="clear" v-model="json_data" placeholder="Input your json data" required></textarea>
+            </div>
+
+        </form>
+
+        
+        <div class="col-12">
+            <button class="btn btn-primary" @click="reverseMessage()">送出</button>
+
+            <button class="btn btn-secondary" @click="clear_input()">清空</button>
+        </div>
+
+    <div>
+
+    <div>
+        <div style="width: 100%; height: 50px;  " >
+        </div>
+        <label >結果 : </label>
+        <div style="width: 100%; height: 10px;  " ></div>
+        <label id="output">{{res}}</label>
+    </div>
+    
+</div>
+</body>
+
+<script src="call_api.js"></script>
+
+</html>
