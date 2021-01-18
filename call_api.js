@@ -4,8 +4,8 @@ var app = new Vue({
     data: {
       message: '',
       res:'',
-      api_url:"http://cigna.great3.com.tw/campaign/egentic/egentic_api.php",
-      json_data:'{"Name" : "測試", "ID" : "f12345", "Phone" : "444", "Birthday" : "2021-01-11","ref01" : "310113002","ref02" : "eGENTIC_warm}", "Consent_status" : "1", "Consent_date" : "2021-01-11", "Other1" : "{{1}}", "Remark" : "{{1}}", "Email": "{{1}}","Gender": "a", "M_income": "a", "Y_income": "a", "Product": "a", "Interest": "a", "Gift": "a", "Announce_date": "2021-01-11", "Award_date": "2021-01-11"}'
+      api_url:"",
+      json_data:''
     },
     methods: {
         clear_input:function(){
