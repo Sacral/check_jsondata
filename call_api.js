@@ -4,8 +4,8 @@ var app = new Vue({
     data: {
       message: '',
       res:'',
-      api_url:'',
-      json_data:''
+      api_url:"http://cigna.great3.com.tw/campaign/egentic/egentic_api.php",
+      json_data:'{"Name" : "測試", "ID" : "f12345", "Phone" : "444", "Birthday" : "2021-01-11","ref01" : "310113002","ref02" : "eGENTIC_warm}", "Consent_status" : "1", "Consent_date" : "2021-01-11", "Other1" : "{{1}}", "Remark" : "{{1}}", "Email": "{{1}}","Gender": "a", "M_income": "a", "Y_income": "a", "Product": "a", "Interest": "a", "Gift": "a", "Announce_date": "2021-01-11", "Award_date": "2021-01-11"}'
     },
     methods: {
         clear_input:function(){
@@ -51,15 +51,16 @@ var app = new Vue({
                     url: api__url,                        
                     type: 'POST',
                     //xhrFields: {withCredentials: true},application/json
-                    contentType:'application/json; charset=utf-8',
+                    //contentType:'application/json; charset=utf-8',
                     dataType: 'json',                   
                     data: json__data,
                     crossDomain : true,  
-                    headers: {
+                    /*headers: {
                         "accept": "application/json",
-                    },     
-                    error: function (xhr) {
-                        console.log(xhr);
+                        "Access-Control-Allow-Credentials": true
+                    },*/     
+                    error: function (xhr) {                      
+                        that.res = "post失敗"
                      },    
                     success: function (data) { 
     
